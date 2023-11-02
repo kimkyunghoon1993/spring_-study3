@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.fastcampus.ch4.domain.CommentDto;
 
 public interface CommentService {
+
     int getCount(Integer bno) throws Exception;
 
     @Transactional(rollbackFor = Exception.class)

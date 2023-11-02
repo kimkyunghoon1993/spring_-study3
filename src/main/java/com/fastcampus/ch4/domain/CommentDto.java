@@ -2,7 +2,9 @@ package com.fastcampus.ch4.domain;
 
 import java.util.Objects;
 
-import javax.xml.crypto.Data;
+import java.util.Date;
+import java.util.Objects;
+
 
 public class CommentDto {
     private Integer cno;
@@ -10,10 +12,10 @@ public class CommentDto {
     private Integer pcno;
     private String comment;
     private String commenter;
-    private Data reg_date;
-    private Data up_date;
+    private Date reg_date;
+    private Date up_date;
 
-    public CommentDto(){}
+    public CommentDto() {}
 
     public CommentDto(Integer bno, Integer pcno, String comment, String commenter) {
         this.bno = bno;
@@ -62,19 +64,19 @@ public class CommentDto {
         this.commenter = commenter;
     }
 
-    public Data getReg_date() {
+    public Date getReg_date() {
         return reg_date;
     }
 
-    public void setReg_date(Data reg_date) {
+    public void setReg_date(Date reg_date) {
         this.reg_date = reg_date;
     }
 
-    public Data getUp_date() {
+    public Date getUp_date() {
         return up_date;
     }
 
-    public void setUp_date(Data up_date) {
+    public void setUp_date(Date up_date) {
         this.up_date = up_date;
     }
 
@@ -93,14 +95,10 @@ public class CommentDto {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        CommentDto that = (CommentDto)o;
-        return Objects.equals(cno, that.cno) && Objects.equals(bno, that.bno)
-            && Objects.equals(pcno, that.pcno) && Objects.equals(comment, that.comment)
-            && Objects.equals(commenter, that.commenter);
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CommentDto that = (CommentDto) o;
+        return Objects.equals(cno, that.cno) && Objects.equals(bno, that.bno) && Objects.equals(pcno, that.pcno) && Objects.equals(comment, that.comment) && Objects.equals(commenter, that.commenter);
     }
 
     @Override
